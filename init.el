@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 ;;load-path
 (setq load-path (cons "~/.emacs.d/mylisp/" load-path))
 
-=======
->>>>>>> emacs/master
 ;; パッケージ取得先
 (require 'package)
 (setq package-archives
@@ -14,15 +11,6 @@
 ;;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-<<<<<<< HEAD
-=======
-;;; uncomment this line to disable loading of "default.el" at startup
-;; (setq inhibit-default-init t)
-
-(setq-default c-basic-offset 8     ;;基本インデント量4
-              tab-width 8          ;;タブ幅4
-              indent-tabs-mode nil)  ;;インデントをタブでするかスペースでするか
->>>>>>> emacs/master
 ;;
 ;; Auto Complete
 ;;
@@ -36,7 +24,6 @@
 (setq ac-use-menu-map t)       ;; 補完メニュー表示時にC-n/C-pで補完候補選択
 (setq ac-use-fuzzy t)          ;; 曖昧マッチ
 
-<<<<<<< HEAD
 ;;; uncomment this line to disable loading of "default.el" at startup
 ;; (setq inhibit-default-init t)
 
@@ -44,8 +31,6 @@
               tab-width 8          ;;タブ幅4
               indent-tabs-mode nil)  ;;インデントをタブでするかスペースでするか
 
-=======
->>>>>>> emacs/master
 ;; 起動時のウィンドウサイズ、色などを設定
 (if (boundp 'window-system)
     (setq default-frame-alist
@@ -65,13 +50,8 @@
 (setq initial-frame-alist default-frame-alist )
 
 ;; turn on font-lock mode
-<<<<<<< HEAD
 ;;(when (fboundp 'global-font-lock-mode)
 ;;  (global-font-lock-mode t))
-=======
-(when (fboundp 'global-font-lock-mode)
-  (global-font-lock-mode t))
->>>>>>> emacs/master
 
 ;; enable visual feedback on selections
 ;(setq transient-mark-mode t)
@@ -136,24 +116,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-<<<<<<< HEAD
  '(c-basic-offset (quote set-from-style))
-=======
- '(c-basic-offset (quote set-from-style) t)
->>>>>>> emacs/master
  '(c-syntactic-indentation t)
  '(c-syntactic-indentation-in-macros t)
  '(c-tab-always-indent t)
  '(inhibit-startup-screen t)
-<<<<<<< HEAD
  '(package-selected-packages
    (quote
     (web-mode package-utils ac-php php-mode jedi auto-complete)))
  '(tab-width 8))
  
-=======
- '(tab-width 8))
->>>>>>> emacs/master
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -182,23 +154,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-<<<<<<< HEAD
-=======
-;; 現在行のハイライト
-;;(defface hlline-face
-;;  '((((class color)
-;;      (background dark))
-;;     (:background "dark slate gray"))
-;;    (((class color)
-;;      (background light))
-;;     (:background  "#98FB98"))
-;;   (t
-;;     ()))
-;;  "*Face used by hl-line.")
-;;(setq hl-line-face 'hlline-face)
-;;(global-hl-line-mode)
-
->>>>>>> emacs/master
 ;; カーソルの点滅をやめる
 (blink-cursor-mode 0)
 
@@ -208,12 +163,9 @@
 ;; 対応する括弧を光らせる
 (show-paren-mode 1)
 
-<<<<<<< HEAD
 ;; 空白を一気にデリート
 (setq c-hungry-delete-key t)
 
-=======
->>>>>>> emacs/master
 ;; ウィンドウ内に収まらないときだけ、カッコ内も光らせる
 (setq show-paren-style 'mixed)
 (set-face-background 'show-paren-match-face "grey")
@@ -227,7 +179,6 @@
 
 ;;; ツールバーを消す
 (tool-bar-mode 0)
-<<<<<<< HEAD
 
 ;;; *.~ とかのバックアップファイルを作らない
 (setq make-backup-files nil)
@@ -330,5 +281,3 @@
 ;;   )
 ;; (add-hook 'c-mode-hook 'my-c-c++-mode-init)
 ;; (add-hook 'c++-mode-hook 'my-c-c++-mode-init)
-=======
->>>>>>> emacs/master
