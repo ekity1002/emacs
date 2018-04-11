@@ -35,12 +35,12 @@
 (if (boundp 'window-system)
     (setq default-frame-alist
           (append (list
-                   '(foreground-color . "black")  ; 文字色
-                   '(background-color . "white")  ; 背景色
-                   '(border-color     . "white")  ; ボーダー色
-                   '(mouse-color      . "black")  ; マウスカーソルの色
-                   '(cursor-color     . "black")  ; カーソルの色
-                   '(cursor-type      . box)      ; カーソルの形状
+                   '(foreground-color . "white")  ; 文字色
+                   '(background-color . "black")  ; 背景色
+                   ;; '(border-color     . "white")  ; ボーダー色
+                   ;; '(mouse-color      . "black")  ; マウスカーソルの色
+                   ;; '(cursor-color     . "black")  ; カーソルの色
+                   ;; '(cursor-type      . box)      ; カーソルの形状
                    '(top . 60) ; ウィンドウの表示位置（Y座標）
                    '(left . 140) ; ウィンドウの表示位置（X座標）
                    '(width . 120) ; ウィンドウの幅（文字数）
@@ -86,7 +86,8 @@
 ; 選択範囲に色を付ける
 (setq transient-mark-mode t)
 (set-face-foreground 'region "white")
-(set-face-background 'region "SlateBlue2")
+;;(set-face-background 'region "SlateBlue2")
+(set-face-background 'region "Blue")
 
 ;; 文字の色を設定します。
 (add-to-list 'default-frame-alist '(foreground-color . "black"))
@@ -184,6 +185,15 @@
 (setq make-backup-files nil)
 ;;; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
+
+;;window 移動
+(global-set-key (kbd "C-t") 'other-window)
+
+;; スクロールバーを消す
+(scroll-bar-mode -1)
+
+;; 閉じ括弧自動挿入
+(electric-pair-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; for windows (NTEmacs)
