@@ -270,10 +270,10 @@
 ;; (require 'python)
 
 ;; ;; 補完対象とするソースコードまでのパス
-;; (setenv "PYTHONPATH" "/d/Anaconda/Lib/site-packages/")
-;; (require 'jedi)
-;; (add-hook 'python-mode-hook 'jedi:setup)
-;; (setq jedi:complete-on-dot t)
+(setenv "PYTHONPATH" "~/anaconda3/lib/python3.7/site-packages/")
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
